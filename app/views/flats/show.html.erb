@@ -1,0 +1,14 @@
+<%= link_to 'MiniAirbnb', flats_path %>
+
+<h1><%= @flat.name %></h1>
+<%= link_to 'edit', edit_flat_path(@flat) %>
+<%= link_to 'delete', flat_path(@flat), method: :delete %>
+
+<h3><%= @flat.price_per_night %>€/night</h3>
+<h4><%= @flat.number_of_guests %> guests</h4>
+<h4><%= @flat.address %></h4>
+<p>
+  <%= "#{@flat.description[0,100]}..."%>
+</p>
+
+<%= link_to 'Go back to main menu', flats_path %>
